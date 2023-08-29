@@ -55,7 +55,7 @@ def deepLearnExpression(csv_file, fasta_file, control_columns,
     third_replicate_node = {}
     third_replicate_node["node_replicate3"] = np.array(third_replicate_weight.to_list())
     all_training_nodes = {**control_node,**first_replicate_node, \
-                                            **second_replicate_node, third_replicate_node}
+                                            **second_replicate_node, **third_replicate_node}
     control_node_train = (length_nodes * all_training_nodes["control_node"]).sum()
     replicate_first_train = (length_nodes * all_training_nodes["first_replicate_node"]).sum()
     replicate_second_train = (length_nodes * all_training_nodes["second_replicate_node"]).sum()
